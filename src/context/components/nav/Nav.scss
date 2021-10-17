@@ -1,0 +1,48 @@
+.Nav {
+  .nav-logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    z-index: 999;
+  }
+
+  .nav-menuBtn {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    z-index: 999;
+    border-radius: 50%;
+    background-color: #fff;
+    padding: 8px;
+    border: 0;
+    box-shadow: 0 0 6px 0 rgb(0, 0, 0 / 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.75;
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    justify-content: center;
+    text-decoration: none;
+
+    &:hover {
+      background-color: #007aff;
+    }
+
+    &-label {
+      width: 100%;
+      display: inherit;
+      align-items: inherit;
+      justify-content: inherit;
+    }
+  }
+}
+
+.full {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  z-index: 99;
+}
