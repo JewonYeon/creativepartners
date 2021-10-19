@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import logo from "../../../images/logo.svg";
 import { Link } from "react-router-dom";
+import { Menu, Close, Logo } from "../icon/index.js";
 import "./Nav.scss";
-import Hamburger from "./components/Hamburger.jsx";
 
 const Nav = ({ state, onClickMenu }) => {
   useEffect(() => {
@@ -14,18 +14,19 @@ const Nav = ({ state, onClickMenu }) => {
   });
 
   return (
-    <>
-      <div className="Nav">
-        <Link to="/">
-          <img src={logo} alt="logo" className="nav-logo" />
-        </Link>
-        <button className="nav-menuBtn" onClick={onClickMenu}>
-          <span className="nav-menuBtn-label">
-            <Hamburger />
-          </span>
-        </button>
-      </div>
-    </>
+    <div className="Nav">
+      {/* <Link to="/">
+        <img src={logo} alt="logo" className="nav-logo" />
+      </Link> */}
+      <Link to="/">
+        <Logo openMenu={state} />
+      </Link>
+      <button className="nav-menuBtn" onClick={onClickMenu}>
+        <span className="nav-menuBtn-label">
+          {state ? <Close /> : <Menu />}
+        </span>
+      </button>
+    </div>
   );
 };
 

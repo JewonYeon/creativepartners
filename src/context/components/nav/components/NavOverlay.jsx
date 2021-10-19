@@ -1,11 +1,9 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./NavOverlay.scss";
-import facebook from "./facebook.svg";
-import instagram from "./instagram.svg";
-import youtube from "./youtube.svg";
-import brunch from "./brunch.svg";
 import { ViewportContext } from "../../../hooks/useViewport.jsx";
+
+import NavOverlaySnsLink from "./NavOverlaySnsLink.jsx";
 
 const NavOverlay = ({ closeMenu }) => {
   const { isMobile } = useContext(ViewportContext);
@@ -17,8 +15,6 @@ const NavOverlay = ({ closeMenu }) => {
     { route: "/", english: "BLOG", korean: "블로그" }, // 수정
     { route: "/contact", english: "CONTACT US", korean: "문의" },
   ];
-
-  const snsLinkList = [facebook, instagram, youtube, brunch];
 
   const handleMouseOver = (e) => {
     const content = e.target.innerHTML;
@@ -34,15 +30,13 @@ const NavOverlay = ({ closeMenu }) => {
     return (e.target.innerHTML = english);
   };
 
-  // const
-
   return (
     <div className="NavOverlay">
       <ul className="navOverlay-wrapper">
         {isMobile
           ? menulist.map(({ route, english, korean }, idx) => {
               return (
-                <li key={idx}>
+                <li className="navOverlay-menu" key={idx}>
                   <Link to={route}>
                     {english}
                     <br />
@@ -53,7 +47,7 @@ const NavOverlay = ({ closeMenu }) => {
             })
           : menulist.map(({ route, english }, idx) => {
               return (
-                <li key={idx}>
+                <li className="navOverlay-menu" key={idx}>
                   <Link
                     to={route}
                     onMouseOver={handleMouseOver}
@@ -65,19 +59,7 @@ const NavOverlay = ({ closeMenu }) => {
                 </li>
               );
             })}
-        <li className="navOverlay-snsLink" key="link">
-          <ul>
-            {snsLinkList.map((link, idx) => {
-              return (
-                <li key={idx}>
-                  <a>
-                    <img src={link} alt="link" />
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-        </li>
+        <NavOverlaySnsLink />
       </ul>
     </div>
   );

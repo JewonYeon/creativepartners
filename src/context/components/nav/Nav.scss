@@ -1,16 +1,18 @@
 @import "../../styles/mixin";
 
 .Nav {
-  .nav-logo {
-    position: absolute;
-    top: 40px;
-    left: 40px;
-    z-index: 999;
+  a {
+    svg {
+      position: absolute;
+      top: 40px;
+      left: 40px;
+      z-index: 999;
 
-    @include mobile {
-      top: 29px;
-      left: 15px;
-      max-height: 27px;
+      @include mobile {
+        top: 29px;
+        left: 15px;
+        max-height: 27px;
+      }
     }
   }
 
@@ -23,7 +25,7 @@
     background-color: #fff;
     padding: 8px;
     border: 0;
-    box-shadow: 0 0 6px 0 rgb(0, 0, 0 / 0.1);
+    box-shadow: 0 0 6px 0 rgb(192, 191, 191);
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
@@ -33,16 +35,21 @@
     vertical-align: middle;
     justify-content: center;
     text-decoration: none;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #005dcc;
+
+      svg {
+        fill: #fff;
+      }
+    }
 
     @include mobile {
       top: 24px;
       right: 15px;
       width: 32px;
       height: 32px;
-    }
-
-    &:hover {
-      background-color: #007aff;
     }
 
     &-label {
