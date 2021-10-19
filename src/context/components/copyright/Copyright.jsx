@@ -1,7 +1,6 @@
 import React, { useContext } from "react";
 import "./Copyright.scss";
 import { ViewportContext } from "../../hooks/useViewport.jsx";
-import { Up } from "../icon/index.js";
 import CopyrightTopButton from "./CopyrightTopButton.jsx";
 
 const Copyright = () => {
