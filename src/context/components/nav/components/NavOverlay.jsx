@@ -7,9 +7,9 @@ import youtube from "./youtube.svg";
 import brunch from "./brunch.svg";
 import { ViewportContext } from "../../../hooks/useViewport.jsx";
 
-const NavOverlay = () => {
+const NavOverlay = ({ closeMenu }) => {
   const { isMobile } = useContext(ViewportContext);
-  console.log(isMobile);
+
   const menulist = [
     { route: "/aboutus", english: "ABOUT US", korean: "회사소개" },
     { route: "/service", english: "ONLINE SERVICE", korean: "비대면 서비스" },
@@ -58,6 +58,7 @@ const NavOverlay = () => {
                     to={route}
                     onMouseOver={handleMouseOver}
                     onMouseOut={handleMouseOut}
+                    onClick={closeMenu}
                   >
                     {english}
                   </Link>

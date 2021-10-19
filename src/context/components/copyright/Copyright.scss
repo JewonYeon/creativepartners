@@ -1,6 +1,12 @@
+@import "../../styles/mixin";
+
 .Copyright {
   background-color: #222;
   padding: 12px 0;
+
+  @include mobile {
+    padding: 8px 0;
+  }
 
   .copyright-wrapper {
     display: flex;
@@ -9,18 +15,22 @@
     max-width: 1230px;
     padding: 0 15px;
 
+    @include mobile {
+      justify-content: center;
+    }
+
     .content1 {
       color: #7a7a7a;
       font-size: 14px;
     }
+  }
 
-    .content2 {
-      cursor: pointer;
-      color: #fff;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+  .content2 {
+    cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

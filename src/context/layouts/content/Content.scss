@@ -1,6 +1,12 @@
+@import "../../styles/mixin";
+
 .LayoutContent {
   position: absolute;
   top: 259px;
   width: 100%;
   background-color: rgb(255, 255, 255);
+
+  @include mobile {
+    top: 172px;
+  }
 }

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./AboutUs1.scss";
+import { ViewportContext } from "../../../context/hooks/useViewport.jsx";
 
 const AboutUs1 = () => {
-  // useContext로 span (create)에 br 추가
+  const { isMobile } = useContext(ViewportContext);
 
   return (
     <div className="AboutUs1">
@@ -11,6 +12,7 @@ const AboutUs1 = () => {
           <div className="title">
             {`You `}
             <span>create,</span>
+            {isMobile ? <br /> : <></>}
             {` we `}
             <span>support!</span>
           </div>

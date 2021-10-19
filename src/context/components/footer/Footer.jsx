@@ -1,9 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import "./Footer.scss";
 import move from "./move.png";
-// import facebook from "../nav/components/facebook.svg";
-
 import facebook from "../nav/components/facebook.svg";
 import instagram from "../nav/components/instagram.svg";
 import youtube from "../nav/components/youtube.svg";
@@ -11,7 +9,7 @@ import brunch from "../nav/components/brunch.svg";
 
 const Footer = () => {
   const snsLinkList = [facebook, instagram, youtube, brunch];
-  // https://velog.io/@roghabo/hover-%EC%8B%9C-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EB%B3%80%ED%99%98%ED%95%98%EA%B8%B0react-hook
+
   return (
     <div className="Footer">
       <div className="footer-section">
@@ -33,7 +31,7 @@ const Footer = () => {
                   {snsLinkList.map((link, idx) => {
                     return (
                       <li key={idx}>
-                        <a>
+                        <a href="#!">
                           <img src={link} alt="link" />
                         </a>
                       </li>

@@ -1,9 +1,17 @@
+@import "../../styles/mixin";
+
 .Nav {
   .nav-logo {
     position: absolute;
     top: 40px;
     left: 40px;
     z-index: 999;
+
+    @include mobile {
+      top: 29px;
+      left: 15px;
+      max-height: 27px;
+    }
   }
 
   .nav-menuBtn {
@@ -26,6 +34,13 @@
     justify-content: center;
     text-decoration: none;
 
+    @include mobile {
+      top: 24px;
+      right: 15px;
+      width: 32px;
+      height: 32px;
+    }
+
     &:hover {
       background-color: #007aff;
     }
@@ -37,12 +52,4 @@
       justify-content: inherit;
     }
   }
-}
-
-.full {
-  position: fixed;
-  width: 100vw;
-  height: 100%;
-  background-color: rgb(0, 0, 0);
-  z-index: 99;
 }

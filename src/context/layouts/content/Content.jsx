@@ -10,12 +10,13 @@ const Content = ({ children }) => {
   const [openMenu, setOpenMenu] = useState(false);
 
   const handleMenu = () => {
-    setOpenMenu(!openMenu);
+    setOpenMenu((prev) => !prev);
   };
 
   return (
     <>
       <Nav state={openMenu} onClickMenu={handleMenu} />
+      {openMenu ? <NavOverlay closeMenu={handleMenu} /> : <></>}
       <Header />
       <div className="LayoutContent">
         {children}

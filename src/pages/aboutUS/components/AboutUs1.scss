@@ -1,9 +1,15 @@
+@import "../../../context/styles/mixin";
+
 .AboutUs1 {
   padding: 80px 0 70px;
+  @include mobile {
+    padding: 40px 0 30px;
+  }
 
   .aboutUs1-wrapper {
     max-width: 1230px;
     padding: 0 15px;
+    margin: auto;
 
     .aboutUs1-slogan {
       // display: flex;
@@ -19,6 +25,11 @@
           font-weight: 900;
           color: #222;
         }
+
+        @include mobile {
+          font-size: 26px;
+          margin-bottom: 20px;
+        }
       }
 
       .content1 {
@@ -26,6 +37,9 @@
         color: #424242;
         font-weight: 300;
         margin-bottom: 15px;
+        @include mobile {
+          font-size: 14px;
+        }
       }
 
       .content2 {
@@ -33,6 +47,10 @@
         color: #424242;
         font-weight: 300;
         margin-bottom: 70px;
+        @include mobile {
+          font-size: 14px;
+          margin-bottom: 35px;
+        }
       }
     }
 
@@ -45,12 +63,23 @@
       padding: 50px 0;
       margin-top: 15px;
 
+      @include mobile {
+        padding: 20px 0;
+      }
+
       .title {
         flex-grow: 0;
         max-width: 25%;
         flex-basis: 25%;
         font-size: 32px;
         font-weight: 700;
+
+        @include mobile {
+          max-width: 100%;
+          font-size: 24px;
+          margin-bottom: 15px;
+          flex-basis: 100%;
+        }
       }
 
       .content {
@@ -59,6 +88,12 @@
         flex-basis: 75%;
         font-size: 18px;
         font-weight: 300;
+        @include mobile {
+          width: 100%;
+          flex-basis: 100%;
+          font-size: 14px;
+          max-width: 100%;
+        }
       }
     }
 
@@ -71,12 +106,20 @@
       padding: 50px 0;
       margin-top: 15px;
 
+      @include mobile {
+        padding: 20px 0;
+      }
+
       .title {
         flex-grow: 0;
         max-width: 25%;
         flex-basis: 25%;
         font-size: 32px;
         font-weight: 700;
+        @include mobile {
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
       }
 
       .content {
@@ -85,6 +128,13 @@
         flex-basis: 25%;
         font-size: 18px;
         font-weight: 300;
+
+        @include mobile {
+          max-width: 100%;
+          flex-basis: 100%;
+          margin-bottom: 12px;
+          font-size: 14px;
+        }
       }
     }
   }
