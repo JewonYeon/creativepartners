@@ -1,9 +1,6 @@
 import React, { useState } from "react";
-import Nav from "../../components/nav/Nav.jsx";
-import Header from "../../components/header/Header.jsx";
-import Footer from "../../components/footer/Footer.jsx";
-import Copyright from "../../components/copyright/Copyright.jsx";
 import "./Content.scss";
+import { Nav, Header, Footer, Copyright } from "../../components/index.js";
 import NavOverlay from "../../components/nav/components/NavOverlay.jsx";
 
 const Content = ({ children }) => {
