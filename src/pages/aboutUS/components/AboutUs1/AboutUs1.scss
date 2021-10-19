@@ -1,0 +1,14 @@
+@import "../../../../context/styles/mixin";
+
+.AboutUs1 {
+  padding: 80px 0 70px;
+  @include mobile {
+    padding: 40px 0 30px;
+  }
+
+  .aboutUs1-wrapper {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: auto;
+  }
+}
