@@ -19,18 +19,14 @@
       justify-content: center;
     }
 
-    .content1 {
+    .copyright-content {
       color: #7a7a7a;
       font-size: 14px;
-    }
-  }
 
-  .content2 {
-    cursor: pointer;
-    color: #fff;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+      @include mobile {
+        font-size: 12px;
+        padding-bottom: 8px;
+      }
+    }
   }
 }

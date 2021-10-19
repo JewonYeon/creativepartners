@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
 import "./Copyright.scss";
-import up from "./up.svg";
 import { ViewportContext } from "../../hooks/useViewport.jsx";
+import { Up } from "../icon/index.js";
+import CopyrightTopButton from "./CopyrightTopButton.jsx";
 
 const Copyright = () => {
   const { isMobile } = useContext(ViewportContext);
@@ -15,26 +16,12 @@ const Copyright = () => {
   return (
     <div className="Copyright">
       <div className="copyright-wrapper">
-        <div className="content1">
+        <div className="copyright-content">
           COPYRIGHT 2021. CREATIVE PARTNERS. All Rights Reserved.
         </div>
-        {isMobile ? (
-          <></>
-        ) : (
-          <div className="content2" onClick={handleTop}>
-            TOP
-            <img src={up} alt="up" />
-          </div>
-        )}
+        {isMobile ? <></> : <CopyrightTopButton onClick={handleTop} />}
       </div>
-      {isMobile ? (
-        <div className="content2" onClick={handleTop}>
-          TOP
-          <img src={up} alt="up" />
-        </div>
-      ) : (
-        <></>
-      )}
+      {isMobile ? <CopyrightTopButton onClick={handleTop} /> : <></>}
     </div>
   );
 };
